@@ -3,7 +3,6 @@ package com.amzi.dao;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertThat;
 
 public class LoginDaoBeanTest {
@@ -23,6 +22,6 @@ public class LoginDaoBeanTest {
         boolean expected = false;
         boolean actual = login.validate("Admin", "password");
 
-        assertThat(actual, not(expected));
+        assertThat(actual, is(expected));
     }
 }
